@@ -7,7 +7,7 @@
   (Integer/parseInt (read-line)))
 
 (defn end_game [status number_to_guess]
-  (str "You " status "!" " The number was: " number_to_guess))
+  (println (str "You " status "!" " The number was: " number_to_guess)))
 
 (defn lost_game [lives]
   (= lives 0))
@@ -24,7 +24,5 @@
 
 (def number_to_guess (+ (rand-int 10) 1))
 
-(def result (guessing_game number_to_guess 3 "Guess the number between 1 and 10!"))
-
-(println result)
+(guessing_game number_to_guess 3 "Guess the number between 1 and 10!")
 
